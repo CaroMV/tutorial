@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Imágenes</title>
+</head>
+<body>
+    <h1>Imágenes Subidas</h1>
+
+    <a href="/subir">Subir nueva</a>
+    <hr>
+
+    {% for img in imagenes %}
+        <div>
+            <h3>{{ img.titulo }}</h3>
+            <img src="{{ img.ruta }}" width="250">
+            <p>{{ img.created_at }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
